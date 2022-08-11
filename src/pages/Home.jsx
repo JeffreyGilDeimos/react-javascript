@@ -17,13 +17,13 @@ function Home() {
           <Link to="/prime-numbers">Prime Numbers</Link>
         </li>
         <li class="list-group-item list-group-item-info">
-          This is a warning list group item
+          <Link to="/multiplication-table">Multiplication Table</Link>
         </li>
         <li class="list-group-item list-group-item-secondary">
-          This is a info list group item
+          <Link to="/sum-of-natural">Sum of Natural Numbers</Link>
         </li>
         <li class="list-group-item list-group-item-light">
-          This is a light list group item
+          <Link to="/sum-of-all-digits">Sum of All Digits</Link>
         </li>
         <li class="list-group-item list-group-item-dark">
           This is a dark list group item
