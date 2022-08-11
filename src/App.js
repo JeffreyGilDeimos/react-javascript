@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/' element={<Fibonacci />} />
+        <Route path='/fibonacci' element={<Fibonacci />} />
         <Route path='/strings' element={<Strings />} />
         <Route path='/prime-numbers' element={<PrimeNumbers />} />
         <Route path='/test' element={<Test />} />
