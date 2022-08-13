@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 
-export default function Triangle() {
+export default function RightTriangle() {
   const [input, setInput] = useState("");
-  const rightTriangle = [];
+  const sequence = [];
 
-  const generateTriangle = () => {
-    if (parseInt(input) < 1) {
-      return "Cannot execute.";
+  const getRightTriangle = () => {
+    if (isNaN(input) || !input) {
+      return "Please input number";
     }
 
     let total = "";
-
     for (var i = 1; i <= input; i++) {
       total = total.concat(" *");
-      rightTriangle.push(total);
-    }
-    //const reverseRightTriangle = rightTriangle.slice().reverse().slice(1);
-    const fullTriangle = [].concat(
-      rightTriangle,
-      rightTriangle.slice().reverse().slice(1)
-    );
+      sequence.push(total);
 
-    return fullTriangle.map((data) => (
+      //sequence.push(<br />);
+    }
+    // return <h2>0</h2>;
+
+    return sequence.map((data) => (
       <h1 className="col-12 w-100 text-primary">{data}</h1>
     ));
   };
@@ -40,7 +37,7 @@ export default function Triangle() {
             }}
           />
         </div>
-        <div>{generateTriangle()}</div>
+        <div>{getRightTriangle()}</div>
       </div>
     </div>
   );

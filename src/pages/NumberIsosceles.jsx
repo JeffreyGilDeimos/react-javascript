@@ -12,7 +12,7 @@ export default function Triangle() {
     let total = "";
 
     for (var i = 1; i <= input; i++) {
-      total = total.concat(" *");
+      total = total.concat(" ", i);
       rightTriangle.push(total);
     }
     //const reverseRightTriangle = rightTriangle.slice().reverse().slice(1);

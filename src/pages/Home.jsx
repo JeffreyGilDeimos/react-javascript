@@ -26,7 +26,25 @@ function Home() {
           <Link to="/sum-of-all-digits">Sum of All Digits</Link>
         </li>
         <li class="list-group-item list-group-item-dark">
-          This is a dark list group item
+          <Link to="/check-within-100-500">Check within 100 to 500</Link>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <Link to="/right-triangle">Right Triangle</Link>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <Link to="/triangle">Isosceles Triangle</Link>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <Link to="/number-right-triangle">Number Right Triangle</Link>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <Link to="/largest-number">Get the Largest number</Link>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <Link to="/vowels">Get the number of Vowels</Link>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <Link to="/number-isosceles">Number Isosceles</Link>
         </li>
       </ol>
     </div>
