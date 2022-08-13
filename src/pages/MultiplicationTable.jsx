@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function MultiplicationTable() {
+export default function MultiplicationTable() {
   const [input, setInput] = useState("");
   const sequence = [];
 
@@ -45,5 +45,3 @@ function MultiplicationTable() {
     </div>
   );
 }
-
-export default MultiplicationTable;
