@@ -1,45 +1,37 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function MultiplicationTable() {
   const [input, setInput] = useState("");
-  const sequence = [];
 
-  const multiplyNumber = () => {
-    // Check if letter or null
+  const numberMultiplied = () => {
     if (isNaN(input) || !input) {
-      return "Please input integer.";
+      return "Please enter a number.";
+    } else {
+      const sequence = [];
+
+      for (let i = 1; i <= 10; i++) {
+        sequence.push(i * input);
+      }
+
+      return sequence.map((data) => <h6>{data}</h6>);
     }
-    // Creating multiplication table
-    for (let i = 1; i <= 10; i++) {
-      sequence.push(input * i);
-    }
-    return sequence.map((data) => data);
   };
 
   return (
-    <div className="container p-5">
+    <div className="container">
       <div className="row">
-        <div className="col-md-5">
+        <div className="col-12 py-5 w-50">
           <input
             type="text"
-            className="w-100 lead"
-            placeholder="Input"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            placeholder="input"
+            onChange={(e) => {
+              setInput(e.target.value);
+            }}
           />
         </div>
-        <div className="col-md-5">
-          <textarea
-            className="text-primary"
-            name="text"
-            id="text"
-            cols="30"
-            rows="10"
-            readOnly={true}
-            placeholder="Output"
-            value={multiplyNumber()}
-          />
+
+        <div>
+          <h6>{numberMultiplied()}</h6>
         </div>
       </div>
     </div>

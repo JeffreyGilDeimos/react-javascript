@@ -2,42 +2,40 @@ import React, { useState } from "react";
 
 export default function RightTriangle() {
   const [input, setInput] = useState("");
-  const sequence = [];
 
-  const getRightTriangle = () => {
+  const generateRightTriangle = () => {
     if (isNaN(input) || !input) {
-      return "Please input number";
+      return "Please enter a number.";
+    } else {
+      let total = "";
+      const triangle = [];
+
+      for (let i = 1; i <= input; i++) {
+        total = total.concat(" *");
+        triangle.push(total);
+      }
+
+      return triangle.map((data, index) => (
+        <h1 className="col-12" key={index}>
+          {data}
+        </h1>
+      ));
     }
-
-    let total = "";
-    for (var i = 1; i <= input; i++) {
-      total = total.concat(" *");
-      sequence.push(total);
-
-      //sequence.push(<br />);
-    }
-    // return <h2>0</h2>;
-
-    return sequence.map((data) => (
-      <h1 className="col-12 w-100 text-primary">{data}</h1>
-    ));
   };
 
   return (
-    <div className="container">
+    <div className="container py-3">
       <div className="row">
-        <div className="col12 w-50 pb-5 pt-3">
+        <div className="col-12 w-50 pb-3">
           <input
             type="text"
-            className="w-100 text-primary lead"
-            placeholder="Input"
             value={input}
-            onChange={(event) => {
-              setInput(event.target.value);
+            onChange={(e) => {
+              setInput(e.target.value);
             }}
           />
         </div>
-        <div>{getRightTriangle()}</div>
+        <div>{generateRightTriangle()}</div>
       </div>
     </div>
   );
