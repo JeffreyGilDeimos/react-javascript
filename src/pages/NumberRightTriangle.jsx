@@ -26,16 +26,19 @@ export default function NumberRightTriangle() {
   return (
     <div className="container py-3">
       <div className="row">
-        <div className="col-12 w-50 pb-3">
+        <div className="col-6 w-50 py-5 fs-2">
           <input
             type="text"
+            placeholder="input"
             value={input}
             onChange={(e) => {
               setInput(e.target.value);
             }}
           />
         </div>
-        <div>{generateNumberRightTriangle()}</div>
+        <div className="col-6 w-50 py-5 fs-2 text-primary">
+          {generateNumberRightTriangle()}
+        </div>
       </div>
     </div>
   );

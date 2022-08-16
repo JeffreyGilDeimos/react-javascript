@@ -26,16 +26,19 @@ export default function RightTriangle() {
   return (
     <div className="container py-3">
       <div className="row">
-        <div className="col-12 w-50 pb-3">
+        <div className="col-4 w-50 py-5 fs-2">
           <input
             type="text"
+            placeholder="input"
             value={input}
             onChange={(e) => {
               setInput(e.target.value);
             }}
           />
         </div>
-        <div>{generateRightTriangle()}</div>
+        <div className="col-4 w-50 py-5 text-primary fs-2">
+          {generateRightTriangle()}
+        </div>
       </div>
     </div>
   );

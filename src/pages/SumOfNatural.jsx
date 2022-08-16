@@ -29,7 +29,7 @@ export default function SumOfNatural() {
             }}
           />
           <div className="ps-5">
-            <h1>{getSum()}</h1>
+            <h1 className="text-primary">{getSum()}</h1>
           </div>
         </div>
       </div>

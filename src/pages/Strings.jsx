@@ -19,7 +19,7 @@ export default function Strings() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12 py-5 w-50">
+        <div className="col-6 py-5 w-50 fs-2">
           <input
             type="text"
             placeholder="input"
@@ -29,7 +29,9 @@ export default function Strings() {
           />
         </div>
 
-        <div>{reverseString()}</div>
+        <div className="col-6 py-5 w-50 fs-2 text-primary">
+          {reverseString()}
+        </div>
       </div>
     </div>
   );

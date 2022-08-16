@@ -13,14 +13,14 @@ export default function MultiplicationTable() {
         sequence.push(i * input);
       }
 
-      return sequence.map((data) => <h6>{data}</h6>);
+      return sequence.map((data) => <h1>{data}</h1>);
     }
   };
 
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12 py-5 w-50">
+        <div className="col-4 py-5 w-50 fs-2">
           <input
             type="text"
             placeholder="input"
@@ -29,10 +29,7 @@ export default function MultiplicationTable() {
             }}
           />
         </div>
-
-        <div>
-          <h6>{numberMultiplied()}</h6>
-        </div>
+        <div className="col-6 py-5 fs-2 text-primary">{numberMultiplied()}</div>
       </div>
     </div>
   );
