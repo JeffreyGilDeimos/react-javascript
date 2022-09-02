@@ -8,11 +8,13 @@ export default function MultiplicationTable() {
       return "Please enter a number.";
     } else {
       const sequence = [];
-
+      let total = 0;
+      let total1 = "";
       for (let i = 1; i <= 10; i++) {
-        sequence.push(i * input);
+        total = i * input;
+        total1 = total1.concat(" ", total);
       }
-
+      sequence.push(total1);
       return sequence.map((data) => <h1>{data}</h1>);
     }
   };
@@ -23,6 +25,7 @@ export default function MultiplicationTable() {
         <div className="col-4 py-5 w-50 fs-2">
           <input
             type="text"
+            value={input}
             placeholder="input"
             onChange={(e) => {
               setInput(e.target.value);

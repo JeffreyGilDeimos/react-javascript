@@ -8,9 +8,9 @@ export default function PrimeNumbers() {
     if (isNaN(input) || !input) {
       return "Please enter a number.";
     } else if (parseInt(input) < 1) {
-      return "The number is not a Prime.";
+      return `${input} is not a Prime number.`;
     } else if (parseInt(input) === 1) {
-      return "The number is not a Prime nor composite.";
+      return `Number ${input} is not a Prime nor composite.`;
     } else {
       for (let i = 2; i < parseInt(input); i++) {
         if (parseInt(input) % i === 0) {

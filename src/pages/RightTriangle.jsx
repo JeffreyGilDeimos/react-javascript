@@ -15,11 +15,7 @@ export default function RightTriangle() {
         triangle.push(total);
       }
 
-      return triangle.map((data, index) => (
-        <h1 className="col-12" key={index}>
-          {data}
-        </h1>
-      ));
+      return triangle.map((data) => <h1 className="col-12">{data}</h1>);
     }
   };
 
